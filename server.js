@@ -23,5 +23,4 @@ var spawn = require('child_process').spawn;
 		socket.emit('render',frame);
 	});
 
-};
 
