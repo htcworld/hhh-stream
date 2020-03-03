@@ -3,7 +3,7 @@ var http = require("http");
 var spawn = require('child_process').spawn;
 // start server
 	
-	var ffmpeg = require('child_process').spawn("ffmpeg-source/ffmpeg", ["-re", "-i", "assets/input.mp4", "-c:v", "libx264", "-preset", "superfast", "-tune", "zerolatency", "-c:a", "aac", "-ar", "44100", "-f", "flv", "rtmp://hhh-rtmp.herokuapp.com:1935/live/test_stream.flv" ]);
+	var ffmpeg = require('child_process').spawn("ffmpeg-source/ffmpeg", ["-re", "-i", "assets/input.mp4", "-c:v", "libx264", "-preset", "superfast", "-tune", "zerolatency", "-c:a", "aac", "-ar", "44100", "-f", "flv", "rtmp://streamroom.herokuapp.com:1935/live/test_stream.flv" ]);
 	
 	ffmpeg.on('error', function (err) {
 		console.log(err);
