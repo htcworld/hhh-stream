@@ -12,6 +12,7 @@
     "body-parser": "latest",
     "express": "latest",
     "method-override": "latest",
-    "socket.io": "latest"	
+    "socket.io": "latest",
+    "@ffmpeg-installer/ffmpeg": "latest"	
   }
 }
