@@ -1,9 +1,11 @@
 // initialize dependencies
 var http = require("http");
+var path = require("path");
+var Ffmpeg = require("@ffmpeg-installer/ffmpeg");
 var spawn = require('child_process').spawn;
 // start server
 	
-	var ffmpeg = require('child_process').spawn("ffmpeg-source/ffmpeg", ["-re", "-i", "assets/input.mp4", "-c:v", "libx264", "-preset", "superfast", "-tune", "zerolatency", "-c:a", "aac", "-ar", "44100", "-f", "flv", "rtmp://streamroom.herokuapp.com:1935/live/test_stream.flv" ]);
+	var ffmpeg = require('child_process').spawn(Ffmpeg.path, ["-re", "-i", "assets/input.mp4", "-c:v", "libx264", "-preset", "superfast", "-tune", "zerolatency", "-c:a", "aac", "-ar", "44100", "-f", "flv", "rtmp://rtmpstream.herokuapp.com:1935/live/test_stream.flv" ]);
 	
 	ffmpeg.on('error', function (err) {
 		console.log(err);
